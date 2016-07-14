@@ -1,0 +1,28 @@
+{
+  "name": "react_es6",
+  "version": "1.0.0",
+  "description": "React Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "risacan",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^6.4.0",
+    "body-parser": "^1.15.2",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "marked": "^0.3.5",
+    "node-dev": "^2.6.2",
+    "react": "^15.2.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1"
+  }
+}
