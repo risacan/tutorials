@@ -11,6 +11,7 @@
 </head>
 <body>
   <app title="Riot.js"></app>
+  <div id="pineapple">apple</div>
   <script type="riot/tag">
     <app>
       <h1>{opts.title}</h1>
@@ -19,7 +20,22 @@
         <input id="passwd" name="password" type="text" placeholder="password">
         <button onClick="{submit}" id="submitbutton">おす</button>
         this.submit = function() {
-          console.log("おされた")
+          var name = document.getElementById("name").value
+          var password = document.getElementById("passwd").value
+          var data = {
+            name: name,
+            password: password
+          }
+          console.log(data)
+          $("#submitbutton").on("click", function(result) {
+            $.ajax({
+              type: 'post',
+              url: '/',
+              dataType: "json",
+              data: JSON.stringify(data)
+            });
+          $("#pineapple").text(JSON.stringify(result));
+          })
         }
     </app>
   </script>
