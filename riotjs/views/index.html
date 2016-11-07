@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="${description}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.7/riot+compiler.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <style>${style}</style>
+</head>
+<body>
+  <app title="Riot.js"></app>
+  <script type="riot/tag">
+    <app>
+      <h1>{opts.title}</h1>
+      <form onsubmiit="{login}">
+        <input id="name"name="username" type="text" placeholder="username">
+        <input id="passwd" name="password" type="text" placeholder="password">
+        <button onClick="{submit}" id="submitbutton">おす</button>
+        this.submit = function() {
+          console.log("おされた")
+        }
+    </app>
+  </script>
+  <script>
+    riot.mount("*");
+  </script>
+</body>
+</html>
